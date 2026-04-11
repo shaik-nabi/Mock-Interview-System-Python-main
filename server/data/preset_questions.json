@@ -1,257 +1,992 @@
 {
     "python developer": [
-        "What are Python's key features?",
-        "What is the difference between Python 2 and Python 3?",
-        "What are Python data types?",
-        "What is a list in Python?",
-        "Difference between list and tuple.",
-        "What is a dictionary in Python?",
-        "What are sets in Python?",
-        "What is list comprehension?",
-        "What are lambda functions?",
-        "What is a decorator in Python?",
-        "What is a generator?",
-        "Difference between generator and iterator.",
-        "What is exception handling?",
-        "Explain try, except, finally.",
-        "What is the difference between deep copy and shallow copy?",
-        "What are Python modules?",
-        "What are Python packages?",
-        "What is PEP8?",
-        "What is Python's Global Interpreter Lock (GIL)?",
-        "What is multithreading in Python?",
-        "Difference between multiprocessing and multithreading.",
-        "What is virtual environment in Python?",
-        "What are Python frameworks?",
-        "What is Django?",
-        "What is Flask?",
-        "Difference between Django and Flask.",
-        "What is REST API?",
-        "How do you connect Python with a database?",
-        "What is Pandas?",
-        "What is NumPy?",
-        "Difference between NumPy array and Python list.",
-        "What is data serialization in Python?",
-        "What are JSON and Pickle?",
-        "What is garbage collection?",
-        "What are Python magic methods?",
-        "What is init method?",
-        "What is inheritance in Python?",
-        "What is polymorphism in Python?",
-        "What is encapsulation in Python?",
-        "What is abstraction in Python?",
-        "What is the difference between class and object?",
-        "What is the difference between @staticmethod and @classmethod?",
-        "What is the difference between is and ==?",
-        "What are Python iterators?",
-        "What are context managers?",
-        "What is the with statement?",
-        "What are Python libraries used for data analysis?",
-        "How do you optimize Python code performance?",
-        "Explain Python's memory management."
+        {
+            "question": "What are Python's key features?",
+            "answer": "Python is readable, interpreted, dynamically typed, cross-platform, and has a huge standard library and ecosystem."
+        },
+        {
+            "question": "What is the difference between Python 2 and Python 3?",
+            "answer": "Python 2 is legacy and end-of-life, while Python 3 has better Unicode support, modern syntax, and active updates."
+        },
+        {
+            "question": "What are Python data types?",
+            "answer": "Common Python data types include int, float, str, bool, list, tuple, set, dict, and NoneType."
+        },
+        {
+            "question": "What is a list in Python?",
+            "answer": "A list is an ordered, mutable collection that can store mixed data types and duplicate values."
+        },
+        {
+            "question": "Difference between list and tuple.",
+            "answer": "Lists are mutable and use [], while tuples are immutable and use (); tuples are usually faster and hashable when contents are hashable."
+        },
+        {
+            "question": "What is a dictionary in Python?",
+            "answer": "A dictionary stores key-value pairs in a mutable hash-map structure with unique keys."
+        },
+        {
+            "question": "What are sets in Python?",
+            "answer": "Sets are unordered collections of unique elements, useful for fast membership checks and set operations."
+        },
+        {
+            "question": "What is list comprehension?",
+            "answer": "List comprehension is a compact way to create lists using an expression with optional loops and conditions."
+        },
+        {
+            "question": "What are lambda functions?",
+            "answer": "Lambda functions are small anonymous functions created with lambda, typically for short inline operations."
+        },
+        {
+            "question": "What is a decorator in Python?",
+            "answer": "A decorator wraps a function or class to add behavior without modifying its original code."
+        },
+        {
+            "question": "What is a generator?",
+            "answer": "A generator yields values lazily using yield, producing one item at a time instead of storing all results in memory."
+        },
+        {
+            "question": "Difference between generator and iterator.",
+            "answer": "An iterator is any object with __iter__ and __next__; a generator is a special iterator created by a generator function."
+        },
+        {
+            "question": "What is exception handling?",
+            "answer": "Exception handling is the process of catching runtime errors and handling them gracefully."
+        },
+        {
+            "question": "Explain try, except, finally.",
+            "answer": "try contains risky code, except handles errors, and finally always runs for cleanup."
+        },
+        {
+            "question": "What is the difference between deep copy and shallow copy?",
+            "answer": "Shallow copy duplicates only the outer object, while deep copy recursively copies nested objects as well."
+        },
+        {
+            "question": "What are Python modules?",
+            "answer": "Modules are single Python files containing reusable code such as functions, classes, and variables."
+        },
+        {
+            "question": "What are Python packages?",
+            "answer": "Packages are directories of related modules, usually with __init__.py, used to organize larger codebases."
+        },
+        {
+            "question": "What is PEP8?",
+            "answer": "PEP 8 is Python's official style guide for writing clean and consistent code."
+        },
+        {
+            "question": "What is Python's Global Interpreter Lock (GIL)?",
+            "answer": "The GIL is a CPython lock that allows only one thread to execute Python bytecode at a time."
+        },
+        {
+            "question": "What is multithreading in Python?",
+            "answer": "Multithreading runs multiple threads in one process and is mainly useful for I/O-bound tasks in Python."
+        },
+        {
+            "question": "Difference between multiprocessing and multithreading.",
+            "answer": "Multiprocessing uses separate processes for true parallel CPU work, while multithreading shares memory but is GIL-limited for CPU tasks."
+        },
+        {
+            "question": "What is virtual environment in Python?",
+            "answer": "A virtual environment is an isolated Python setup with its own interpreter and dependencies."
+        },
+        {
+            "question": "What are Python frameworks?",
+            "answer": "Python frameworks are reusable platforms that speed up development for web apps, APIs, data, and ML."
+        },
+        {
+            "question": "What is Django?",
+            "answer": "Django is a full-featured Python web framework with built-in ORM, authentication, admin, and security features."
+        },
+        {
+            "question": "What is Flask?",
+            "answer": "Flask is a lightweight Python micro-framework for web development, offering flexibility and minimal defaults."
+        },
+        {
+            "question": "Difference between Django and Flask.",
+            "answer": "Django is batteries-included and opinionated; Flask is minimal and flexible with extension-based architecture."
+        },
+        {
+            "question": "What is REST API?",
+            "answer": "A REST API is an HTTP-based interface where resources are accessed via URLs using methods like GET, POST, PUT, and DELETE."
+        },
+        {
+            "question": "How do you connect Python with a database?",
+            "answer": "You can connect Python to databases using drivers and ORMs such as sqlite3, psycopg2, mysql-connector, SQLAlchemy, or Django ORM."
+        },
+        {
+            "question": "What is Pandas?",
+            "answer": "Pandas is a Python library for data manipulation and analysis using structures like DataFrame and Series."
+        },
+        {
+            "question": "What is NumPy?",
+            "answer": "NumPy is a numerical computing library that provides fast n-dimensional arrays and vectorized operations."
+        },
+        {
+            "question": "Difference between NumPy array and Python list.",
+            "answer": "NumPy arrays are fixed-type and memory-efficient with fast vector operations, while Python lists are flexible but slower for numeric workloads."
+        },
+        {
+            "question": "What is data serialization in Python?",
+            "answer": "Data serialization is converting objects into storable/transmittable formats, and deserialization reconstructs them."
+        },
+        {
+            "question": "What are JSON and Pickle?",
+            "answer": "JSON is text-based and language-independent, while Pickle is Python-specific and can serialize complex Python objects."
+        },
+        {
+            "question": "What is garbage collection?",
+            "answer": "Garbage collection automatically frees memory used by unreachable objects."
+        },
+        {
+            "question": "What are Python magic methods?",
+            "answer": "Magic methods (dunder methods) like __init__, __str__, and __len__ define how objects behave with built-in operations."
+        },
+        {
+            "question": "What is init method?",
+            "answer": "__init__ is the initializer method that runs when an object is created to set initial attributes."
+        },
+        {
+            "question": "What is inheritance in Python?",
+            "answer": "Inheritance allows a class to reuse and extend the behavior of another class."
+        },
+        {
+            "question": "What is polymorphism in Python?",
+            "answer": "Polymorphism allows the same interface or method name to work with different object types."
+        },
+        {
+            "question": "What is encapsulation in Python?",
+            "answer": "Encapsulation bundles data and methods and restricts direct access to internal details."
+        },
+        {
+            "question": "What is abstraction in Python?",
+            "answer": "Abstraction hides implementation complexity and exposes only essential behavior."
+        },
+        {
+            "question": "What is the difference between class and object?",
+            "answer": "A class is a blueprint; an object is an instance created from that class."
+        },
+        {
+            "question": "What is the difference between @staticmethod and @classmethod?",
+            "answer": "@staticmethod does not receive self or cls, while @classmethod receives cls and can work with class-level data."
+        },
+        {
+            "question": "What is the difference between is and ==?",
+            "answer": "is checks object identity (same memory object), while == checks value equality."
+        },
+        {
+            "question": "What are Python iterators?",
+            "answer": "Iterators are objects that return items one at a time using __next__, enabling lazy traversal."
+        },
+        {
+            "question": "What are context managers?",
+            "answer": "Context managers manage setup and cleanup automatically, often for files, locks, or database connections."
+        },
+        {
+            "question": "What is the with statement?",
+            "answer": "The with statement uses a context manager to ensure resources are properly cleaned up even if errors occur."
+        },
+        {
+            "question": "What are Python libraries used for data analysis?",
+            "answer": "Common Python data analysis libraries include Pandas, NumPy, Matplotlib, Seaborn, SciPy, and scikit-learn."
+        },
+        {
+            "question": "How do you optimize Python code performance?",
+            "answer": "Optimize Python by profiling first, choosing efficient algorithms, vectorizing operations, caching results, and reducing unnecessary I/O."
+        },
+        {
+            "question": "Explain Python's memory management.",
+            "answer": "Python memory management uses reference counting plus cyclic garbage collection, with objects stored in a private heap."
+        }
     ],
     "data analyst": [
-        "What is data analysis?",
-        "What are the steps in the data analysis process?",
-        "Difference between data analyst and data scientist.",
-        "What is data cleaning?",
-        "What are missing values?",
-        "How do you handle missing data?",
-        "What is exploratory data analysis (EDA)?",
-        "What is data visualization?",
-        "Name some data visualization tools.",
-        "What is correlation?",
-        "Difference between correlation and causation.",
-        "What is regression analysis?",
-        "What is linear regression?",
-        "What is logistic regression?",
-        "What is hypothesis testing?",
-        "What is p-value?",
-        "What is standard deviation?",
-        "What is variance?",
-        "What is mean, median, and mode?",
-        "What is outlier detection?",
-        "What is normalization?",
-        "What is standardization?",
-        "What is ETL?",
-        "What is data warehousing?",
-        "What is OLAP?",
-        "What is data mining?",
-        "What is business intelligence?",
-        "What is dashboarding?",
-        "What is Power BI?",
-        "What is Tableau?",
-        "What is a KPI?",
-        "What is A/B testing?",
-        "What is sampling?",
-        "What are descriptive statistics?",
-        "What are predictive analytics?",
-        "What is clustering?",
-        "What is classification?",
-        "What is time series analysis?",
-        "What is feature engineering?",
-        "What is big data?",
-        "What are the Vs of big data?",
-        "What is SQL used for in data analysis?",
-        "What is Python used for in data analysis?",
-        "What is Pandas library?",
-        "What is NumPy used for?",
-        "What is Matplotlib?",
-        "What is Seaborn?",
-        "What is data storytelling?",
-        "How do you present insights to stakeholders?"
+        {
+            "question": "What is data analysis?",
+            "answer": "Data analysis is the process of cleaning, transforming, and interpreting data to extract useful insights."
+        },
+        {
+            "question": "What are the steps in the data analysis process?",
+            "answer": "Typical steps are define the problem, collect data, clean data, explore/analyze, model if needed, visualize, and communicate findings."
+        },
+        {
+            "question": "Difference between data analyst and data scientist.",
+            "answer": "A data analyst focuses on reporting and business insights, while a data scientist builds advanced predictive models and experiments."
+        },
+        {
+            "question": "What is data cleaning?",
+            "answer": "Data cleaning means fixing missing, duplicate, inconsistent, or incorrect data before analysis."
+        },
+        {
+            "question": "What are missing values?",
+            "answer": "Missing values are data points where no value is recorded (null/blank)."
+        },
+        {
+            "question": "How do you handle missing data?",
+            "answer": "You can handle missing data by dropping rows/columns, imputing values (mean/median/mode/model), or flagging missingness."
+        },
+        {
+            "question": "What is exploratory data analysis (EDA)?",
+            "answer": "EDA is the initial exploration of data using summary statistics and visualizations to understand patterns and anomalies."
+        },
+        {
+            "question": "What is data visualization?",
+            "answer": "Data visualization is presenting data graphically to make trends and comparisons easier to understand."
+        },
+        {
+            "question": "Name some data visualization tools.",
+            "answer": "Popular visualization tools include Excel, Tableau, Power BI, Matplotlib, Seaborn, and Plotly."
+        },
+        {
+            "question": "What is correlation?",
+            "answer": "Correlation measures the strength and direction of a relationship between two variables."
+        },
+        {
+            "question": "Difference between correlation and causation.",
+            "answer": "Correlation indicates association, while causation means one variable directly causes changes in another."
+        },
+        {
+            "question": "What is regression analysis?",
+            "answer": "Regression analysis models relationships between variables to explain or predict outcomes."
+        },
+        {
+            "question": "What is linear regression?",
+            "answer": "Linear regression predicts a continuous target using a linear relationship between features and output."
+        },
+        {
+            "question": "What is logistic regression?",
+            "answer": "Logistic regression predicts class probabilities, commonly for binary classification problems."
+        },
+        {
+            "question": "What is hypothesis testing?",
+            "answer": "Hypothesis testing uses sample data to evaluate a claim about a population."
+        },
+        {
+            "question": "What is p-value?",
+            "answer": "A p-value is the probability of observing results at least as extreme as the sample, assuming the null hypothesis is true."
+        },
+        {
+            "question": "What is standard deviation?",
+            "answer": "Standard deviation measures how much data values typically deviate from the mean."
+        },
+        {
+            "question": "What is variance?",
+            "answer": "Variance is the average of squared deviations from the mean."
+        },
+        {
+            "question": "What is mean, median, and mode?",
+            "answer": "Mean is the average, median is the middle value, and mode is the most frequent value."
+        },
+        {
+            "question": "What is outlier detection?",
+            "answer": "Outlier detection identifies unusually distant data points that may represent errors or rare events."
+        },
+        {
+            "question": "What is normalization?",
+            "answer": "Normalization scales values to a fixed range, often 0 to 1."
+        },
+        {
+            "question": "What is standardization?",
+            "answer": "Standardization transforms data to zero mean and unit variance (z-score)."
+        },
+        {
+            "question": "What is ETL?",
+            "answer": "ETL stands for Extract, Transform, Load: move data from sources, clean/reshape it, and load it into a target system."
+        },
+        {
+            "question": "What is data warehousing?",
+            "answer": "Data warehousing is centralized storage of integrated historical data designed for analytics and reporting."
+        },
+        {
+            "question": "What is OLAP?",
+            "answer": "OLAP enables fast multi-dimensional analysis on aggregated data."
+        },
+        {
+            "question": "What is data mining?",
+            "answer": "Data mining is finding hidden patterns, trends, and relationships in large datasets."
+        },
+        {
+            "question": "What is business intelligence?",
+            "answer": "Business intelligence combines tools and practices to analyze data and support business decisions."
+        },
+        {
+            "question": "What is dashboarding?",
+            "answer": "Dashboarding is building visual reports that monitor key metrics in real time or periodically."
+        },
+        {
+            "question": "What is Power BI?",
+            "answer": "Power BI is Microsoft's analytics platform for data modeling, visualization, and dashboard sharing."
+        },
+        {
+            "question": "What is Tableau?",
+            "answer": "Tableau is a data visualization tool for creating interactive dashboards and visual analytics."
+        },
+        {
+            "question": "What is a KPI?",
+            "answer": "A KPI is a measurable indicator used to evaluate progress toward a business objective."
+        },
+        {
+            "question": "What is A/B testing?",
+            "answer": "A/B testing compares two variants to determine which performs better using statistical evidence."
+        },
+        {
+            "question": "What is sampling?",
+            "answer": "Sampling is selecting a subset of a population to estimate characteristics efficiently."
+        },
+        {
+            "question": "What are descriptive statistics?",
+            "answer": "Descriptive statistics summarize data through measures like mean, median, variance, and percentiles."
+        },
+        {
+            "question": "What are predictive analytics?",
+            "answer": "Predictive analytics uses historical data and models to forecast future outcomes."
+        },
+        {
+            "question": "What is clustering?",
+            "answer": "Clustering groups similar data points without predefined labels (unsupervised learning)."
+        },
+        {
+            "question": "What is classification?",
+            "answer": "Classification assigns data points to predefined categories based on features."
+        },
+        {
+            "question": "What is time series analysis?",
+            "answer": "Time series analysis studies data over time to detect trend/seasonality and forecast future values."
+        },
+        {
+            "question": "What is feature engineering?",
+            "answer": "Feature engineering is creating or transforming variables to improve model performance."
+        },
+        {
+            "question": "What is big data?",
+            "answer": "Big data refers to datasets that are too large/complex for traditional processing methods."
+        },
+        {
+            "question": "What are the Vs of big data?",
+            "answer": "The common Vs of big data are Volume, Velocity, Variety, Veracity, and Value."
+        },
+        {
+            "question": "What is SQL used for in data analysis?",
+            "answer": "SQL is used to query, join, filter, aggregate, and manage structured data."
+        },
+        {
+            "question": "What is Python used for in data analysis?",
+            "answer": "Python is used for data cleaning, analysis, visualization, automation, and machine learning."
+        },
+        {
+            "question": "What is Pandas library?",
+            "answer": "Pandas is a Python library for tabular data handling with DataFrame/Series operations."
+        },
+        {
+            "question": "What is NumPy used for?",
+            "answer": "NumPy is used for fast numerical arrays, vectorized math, and linear algebra."
+        },
+        {
+            "question": "What is Matplotlib?",
+            "answer": "Matplotlib is a core Python plotting library for creating charts and graphs."
+        },
+        {
+            "question": "What is Seaborn?",
+            "answer": "Seaborn is a high-level statistical visualization library built on Matplotlib."
+        },
+        {
+            "question": "What is data storytelling?",
+            "answer": "Data storytelling combines data, visuals, and narrative to communicate insights clearly and persuasively."
+        },
+        {
+            "question": "How do you present insights to stakeholders?",
+            "answer": "Present insights by focusing on business impact, using clear visuals, highlighting key metrics, and giving actionable recommendations."
+        }
     ],
     "software engineer": [
-        "What is software engineering?",
-        "What is SDLC?",
-        "What are the phases of SDLC?",
-        "What is Agile methodology?",
-        "What is Scrum?",
-        "What is Waterfall model?",
-        "What is version control?",
-        "What is Git?",
-        "What is GitHub?",
-        "What is object-oriented programming?",
-        "What are the principles of OOP?",
-        "What is inheritance?",
-        "What is polymorphism?",
-        "What is encapsulation?",
-        "What is abstraction?",
-        "What is a class?",
-        "What is an object?",
-        "What is a constructor?",
-        "What is method overloading?",
-        "What is method overriding?",
-        "What is an interface?",
-        "What is an abstract class?",
-        "What are design patterns?",
-        "What is MVC architecture?",
-        "What is REST API?",
-        "What is microservices architecture?",
-        "What is debugging?",
-        "What is unit testing?",
-        "What is integration testing?",
-        "What is system testing?",
-        "What is CI/CD?",
-        "What is Docker?",
-        "What is Kubernetes?",
-        "What is cloud computing?",
-        "What are data structures?",
-        "What is an array?",
-        "What is a linked list?",
-        "What is a stack?",
-        "What is a queue?",
-        "What is a tree?",
-        "What is a graph?",
-        "What is recursion?",
-        "What is time complexity?",
-        "What is space complexity?",
-        "What is Big O notation?",
-        "What is multithreading?",
-        "What is synchronization?",
-        "What is deadlock?",
-        "What are software testing tools?"
+        {
+            "question": "What is software engineering?",
+            "answer": "Software engineering is applying engineering principles to design, build, test, deploy, and maintain software systems."
+        },
+        {
+            "question": "What is SDLC?",
+            "answer": "SDLC is the Software Development Life Cycle, a structured process for building software."
+        },
+        {
+            "question": "What are the phases of SDLC?",
+            "answer": "The phases usually include requirements, design, development, testing, deployment, and maintenance."
+        },
+        {
+            "question": "What is Agile methodology?",
+            "answer": "Agile is an iterative development approach that delivers value in small increments with continuous feedback."
+        },
+        {
+            "question": "What is Scrum?",
+            "answer": "Scrum is an Agile framework using roles, sprints, standups, reviews, and retrospectives."
+        },
+        {
+            "question": "What is Waterfall model?",
+            "answer": "Waterfall is a linear model where each phase is completed before the next phase begins."
+        },
+        {
+            "question": "What is version control?",
+            "answer": "Version control tracks source code changes and enables collaboration, branching, and rollback."
+        },
+        {
+            "question": "What is Git?",
+            "answer": "Git is a distributed version control system used to manage source code history."
+        },
+        {
+            "question": "What is GitHub?",
+            "answer": "GitHub is a platform for hosting Git repositories and collaborating through pull requests and issues."
+        },
+        {
+            "question": "What is object-oriented programming?",
+            "answer": "Object-oriented programming structures software around objects that combine data and behavior."
+        },
+        {
+            "question": "What are the principles of OOP?",
+            "answer": "The main OOP principles are encapsulation, abstraction, inheritance, and polymorphism."
+        },
+        {
+            "question": "What is inheritance?",
+            "answer": "Inheritance allows a class to reuse and extend behavior from another class."
+        },
+        {
+            "question": "What is polymorphism?",
+            "answer": "Polymorphism allows one interface to support different implementations."
+        },
+        {
+            "question": "What is encapsulation?",
+            "answer": "Encapsulation hides internal state and exposes controlled access through methods."
+        },
+        {
+            "question": "What is abstraction?",
+            "answer": "Abstraction focuses on essential behavior while hiding implementation details."
+        },
+        {
+            "question": "What is a class?",
+            "answer": "A class is a blueprint defining properties and methods."
+        },
+        {
+            "question": "What is an object?",
+            "answer": "An object is an instance of a class created at runtime."
+        },
+        {
+            "question": "What is a constructor?",
+            "answer": "A constructor is a special method used to initialize an object when it is created."
+        },
+        {
+            "question": "What is method overloading?",
+            "answer": "Method overloading means using the same method name with different parameter signatures (language dependent)."
+        },
+        {
+            "question": "What is method overriding?",
+            "answer": "Method overriding means redefining a parent class method in a child class."
+        },
+        {
+            "question": "What is an interface?",
+            "answer": "An interface defines a contract of methods that implementing classes must provide."
+        },
+        {
+            "question": "What is an abstract class?",
+            "answer": "An abstract class cannot be instantiated directly and can include both abstract and concrete methods."
+        },
+        {
+            "question": "What are design patterns?",
+            "answer": "Design patterns are proven reusable solutions to common software design problems."
+        },
+        {
+            "question": "What is MVC architecture?",
+            "answer": "MVC separates application concerns into Model (data), View (UI), and Controller (logic)."
+        },
+        {
+            "question": "What is REST API?",
+            "answer": "A REST API provides stateless HTTP endpoints to access and manipulate resources."
+        },
+        {
+            "question": "What is microservices architecture?",
+            "answer": "Microservices architecture splits an application into small independently deployable services."
+        },
+        {
+            "question": "What is debugging?",
+            "answer": "Debugging is the process of finding, analyzing, and fixing software defects."
+        },
+        {
+            "question": "What is unit testing?",
+            "answer": "Unit testing validates individual components (like functions/classes) in isolation."
+        },
+        {
+            "question": "What is integration testing?",
+            "answer": "Integration testing validates interactions between combined modules or services."
+        },
+        {
+            "question": "What is system testing?",
+            "answer": "System testing validates the complete application end-to-end against requirements."
+        },
+        {
+            "question": "What is CI/CD?",
+            "answer": "CI/CD automates code integration, testing, and deployment for faster and reliable releases."
+        },
+        {
+            "question": "What is Docker?",
+            "answer": "Docker packages applications and dependencies into lightweight portable containers."
+        },
+        {
+            "question": "What is Kubernetes?",
+            "answer": "Kubernetes orchestrates container deployment, scaling, service discovery, and self-healing."
+        },
+        {
+            "question": "What is cloud computing?",
+            "answer": "Cloud computing provides on-demand computing resources over the internet."
+        },
+        {
+            "question": "What are data structures?",
+            "answer": "Data structures are ways to organize data for efficient processing and retrieval."
+        },
+        {
+            "question": "What is an array?",
+            "answer": "An array is an indexed contiguous collection suitable for fast random access."
+        },
+        {
+            "question": "What is a linked list?",
+            "answer": "A linked list is a sequence of nodes connected by pointers, enabling flexible insertions/deletions."
+        },
+        {
+            "question": "What is a stack?",
+            "answer": "A stack is a LIFO structure where the last inserted element is removed first."
+        },
+        {
+            "question": "What is a queue?",
+            "answer": "A queue is a FIFO structure where the first inserted element is removed first."
+        },
+        {
+            "question": "What is a tree?",
+            "answer": "A tree is a hierarchical data structure with parent-child relationships."
+        },
+        {
+            "question": "What is a graph?",
+            "answer": "A graph is a structure of nodes and edges representing relationships."
+        },
+        {
+            "question": "What is recursion?",
+            "answer": "Recursion is when a function calls itself to solve smaller subproblems until a base case."
+        },
+        {
+            "question": "What is time complexity?",
+            "answer": "Time complexity describes how execution time grows with input size."
+        },
+        {
+            "question": "What is space complexity?",
+            "answer": "Space complexity describes how memory usage grows with input size."
+        },
+        {
+            "question": "What is Big O notation?",
+            "answer": "Big O notation expresses the upper bound of algorithm growth rate as input size increases."
+        },
+        {
+            "question": "What is multithreading?",
+            "answer": "Multithreading runs multiple threads concurrently within a process."
+        },
+        {
+            "question": "What is synchronization?",
+            "answer": "Synchronization coordinates access to shared resources to avoid race conditions."
+        },
+        {
+            "question": "What is deadlock?",
+            "answer": "Deadlock occurs when threads/processes wait indefinitely for each other's locked resources."
+        },
+        {
+            "question": "What are software testing tools?",
+            "answer": "Common testing tools include JUnit, pytest, Jest, Selenium, Cypress, and Postman."
+        }
     ],
     "sql developer": [
-        "What is SQL?",
-        "What is a database?",
-        "What is DBMS?",
-        "What is RDBMS?",
-        "What is a table?",
-        "What is a primary key?",
-        "What is a foreign key?",
-        "What is a unique key?",
-        "What is a composite key?",
-        "What are SQL constraints?",
-        "What is normalization?",
-        "What are normal forms?",
-        "What is denormalization?",
-        "What is a view?",
-        "What is an index?",
-        "What are stored procedures?",
-        "What are triggers?",
-        "What is a cursor?",
-        "What are joins?",
-        "Types of joins in SQL.",
-        "Difference between INNER JOIN and OUTER JOIN.",
-        "What is a LEFT JOIN?",
-        "What is a RIGHT JOIN?",
-        "What is a FULL JOIN?",
-        "What is GROUP BY?",
-        "What is HAVING clause?",
-        "Difference between WHERE and HAVING.",
-        "What is ORDER BY?",
-        "What are aggregate functions?",
-        "What is COUNT()?",
-        "What is SUM()?",
-        "What is AVG()?",
-        "What is MAX() and MIN()?",
-        "What is a subquery?",
-        "What is a correlated subquery?",
-        "What are window functions?",
-        "What is ROW_NUMBER()?",
-        "What is RANK()?",
-        "What is DENSE_RANK()?",
-        "What is partitioning?",
-        "What is indexing?",
-        "What is query optimization?",
-        "What is transaction?",
-        "What are ACID properties?",
-        "What is commit and rollback?",
-        "What is database locking?",
-        "What is deadlock in databases?",
-        "What is data integrity?",
-        "What is database backup and recovery?"
+        {
+            "question": "What is SQL?",
+            "answer": "SQL (Structured Query Language) is used to define, query, and manipulate relational databases."
+        },
+        {
+            "question": "What is a database?",
+            "answer": "A database is an organized collection of data stored electronically for easy access and management."
+        },
+        {
+            "question": "What is DBMS?",
+            "answer": "DBMS is software that creates, stores, retrieves, and manages databases."
+        },
+        {
+            "question": "What is RDBMS?",
+            "answer": "RDBMS is a DBMS based on relational tables, keys, and SQL."
+        },
+        {
+            "question": "What is a table?",
+            "answer": "A table is a collection of rows and columns representing an entity in a database."
+        },
+        {
+            "question": "What is a primary key?",
+            "answer": "A primary key uniquely identifies each row in a table and cannot be null."
+        },
+        {
+            "question": "What is a foreign key?",
+            "answer": "A foreign key links a column to a key in another table to enforce referential integrity."
+        },
+        {
+            "question": "What is a unique key?",
+            "answer": "A unique key enforces unique values in one or more columns."
+        },
+        {
+            "question": "What is a composite key?",
+            "answer": "A composite key is a key formed by combining multiple columns."
+        },
+        {
+            "question": "What are SQL constraints?",
+            "answer": "SQL constraints are rules like NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, and DEFAULT to maintain valid data."
+        },
+        {
+            "question": "What is normalization?",
+            "answer": "Normalization organizes data into related tables to reduce redundancy and improve integrity."
+        },
+        {
+            "question": "What are normal forms?",
+            "answer": "Normal forms (1NF, 2NF, 3NF, BCNF, etc.) are levels of normalization with increasing constraints."
+        },
+        {
+            "question": "What is denormalization?",
+            "answer": "Denormalization intentionally adds redundancy to improve read performance in specific scenarios."
+        },
+        {
+            "question": "What is a view?",
+            "answer": "A view is a virtual table based on the result of a SQL query."
+        },
+        {
+            "question": "What is an index?",
+            "answer": "An index is a data structure that speeds up data retrieval at the cost of additional storage and write overhead."
+        },
+        {
+            "question": "What are stored procedures?",
+            "answer": "Stored procedures are precompiled SQL routines stored in the database for reusable logic."
+        },
+        {
+            "question": "What are triggers?",
+            "answer": "Triggers are automatic procedures executed when specific table events (INSERT/UPDATE/DELETE) occur."
+        },
+        {
+            "question": "What is a cursor?",
+            "answer": "A cursor processes query results row by row, usually in procedural SQL operations."
+        },
+        {
+            "question": "What are joins?",
+            "answer": "Joins combine rows from two or more tables using related columns."
+        },
+        {
+            "question": "Types of joins in SQL.",
+            "answer": "Types of joins include INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, CROSS JOIN, and SELF JOIN."
+        },
+        {
+            "question": "Difference between INNER JOIN and OUTER JOIN.",
+            "answer": "INNER JOIN returns only matching rows; OUTER JOIN returns matching rows plus non-matching rows from one or both tables."
+        },
+        {
+            "question": "What is a LEFT JOIN?",
+            "answer": "LEFT JOIN returns all rows from the left table and matched rows from the right table."
+        },
+        {
+            "question": "What is a RIGHT JOIN?",
+            "answer": "RIGHT JOIN returns all rows from the right table and matched rows from the left table."
+        },
+        {
+            "question": "What is a FULL JOIN?",
+            "answer": "FULL JOIN returns all rows from both tables, matching where possible and filling NULL for non-matches."
+        },
+        {
+            "question": "What is GROUP BY?",
+            "answer": "GROUP BY groups rows by one or more columns, typically for aggregate calculations."
+        },
+        {
+            "question": "What is HAVING clause?",
+            "answer": "HAVING filters grouped/aggregated results after GROUP BY."
+        },
+        {
+            "question": "Difference between WHERE and HAVING.",
+            "answer": "WHERE filters rows before grouping; HAVING filters groups after aggregation."
+        },
+        {
+            "question": "What is ORDER BY?",
+            "answer": "ORDER BY sorts query output by one or more columns in ascending or descending order."
+        },
+        {
+            "question": "What are aggregate functions?",
+            "answer": "Aggregate functions compute summary values, such as COUNT, SUM, AVG, MIN, and MAX."
+        },
+        {
+            "question": "What is COUNT()?",
+            "answer": "COUNT() returns the number of rows (or non-null values for a column)."
+        },
+        {
+            "question": "What is SUM()?",
+            "answer": "SUM() returns the total of numeric values."
+        },
+        {
+            "question": "What is AVG()?",
+            "answer": "AVG() returns the average of numeric values."
+        },
+        {
+            "question": "What is MAX() and MIN()?",
+            "answer": "MAX() returns the highest value and MIN() returns the lowest value."
+        },
+        {
+            "question": "What is a subquery?",
+            "answer": "A subquery is a query nested inside another SQL statement."
+        },
+        {
+            "question": "What is a correlated subquery?",
+            "answer": "A correlated subquery references columns from the outer query and executes once per outer row."
+        },
+        {
+            "question": "What are window functions?",
+            "answer": "Window functions compute values across a set of related rows while preserving individual row output."
+        },
+        {
+            "question": "What is ROW_NUMBER()?",
+            "answer": "ROW_NUMBER() assigns a unique sequential number to rows within a partition/order."
+        },
+        {
+            "question": "What is RANK()?",
+            "answer": "RANK() assigns rank with gaps when ties occur."
+        },
+        {
+            "question": "What is DENSE_RANK()?",
+            "answer": "DENSE_RANK() assigns rank without gaps when ties occur."
+        },
+        {
+            "question": "What is partitioning?",
+            "answer": "Partitioning splits large tables or indexes into smaller parts for performance and manageability."
+        },
+        {
+            "question": "What is indexing?",
+            "answer": "Indexing is creating indexes on columns to speed up query retrieval."
+        },
+        {
+            "question": "What is query optimization?",
+            "answer": "Query optimization is improving SQL and execution plans to reduce runtime and resource usage."
+        },
+        {
+            "question": "What is transaction?",
+            "answer": "A transaction is a sequence of database operations treated as a single logical unit."
+        },
+        {
+            "question": "What are ACID properties?",
+            "answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability."
+        },
+        {
+            "question": "What is commit and rollback?",
+            "answer": "COMMIT saves transaction changes permanently; ROLLBACK undoes uncommitted changes."
+        },
+        {
+            "question": "What is database locking?",
+            "answer": "Database locking controls concurrent access to data and protects consistency."
+        },
+        {
+            "question": "What is deadlock in databases?",
+            "answer": "A deadlock happens when transactions block each other in a circular wait."
+        },
+        {
+            "question": "What is data integrity?",
+            "answer": "Data integrity means data remains accurate, consistent, and trustworthy throughout its lifecycle."
+        },
+        {
+            "question": "What is database backup and recovery?",
+            "answer": "Backup and recovery are processes to restore data after failure, corruption, or accidental loss."
+        }
     ],
     "hr": [
-        "Tell me about yourself.",
-        "Why do you want to join our company?",
-        "What are your strengths?",
-        "What are your weaknesses?",
-        "Why should we hire you?",
-        "Where do you see yourself in five years?",
-        "Why did you choose this career?",
-        "What motivates you?",
-        "What are your hobbies?",
-        "Tell me about your biggest achievement.",
-        "Tell me about a challenge you faced.",
-        "How do you handle pressure?",
-        "Describe a time you worked in a team.",
-        "What is your leadership style?",
-        "How do you handle conflict at work?",
-        "What do you know about our company?",
-        "What are your salary expectations?",
-        "Are you willing to relocate?",
-        "Are you willing to work overtime?",
-        "How do you prioritize tasks?",
-        "How do you handle criticism?",
-        "Describe your problem-solving skills.",
-        "How do you manage time effectively?",
-        "What makes you unique?",
-        "What is your greatest failure?",
-        "What did you learn from your mistakes?",
-        "What are your career goals?",
-        "How do you stay updated with industry trends?",
-        "How do you handle multiple deadlines?",
-        "What is your ideal work environment?",
-        "What type of manager do you prefer?",
-        "What do you expect from this role?",
-        "How do you deal with difficult coworkers?",
-        "What are your short-term goals?",
-        "What are your long-term goals?",
-        "Why did you choose your degree?",
-        "What is your biggest professional accomplishment?",
-        "Describe your communication skills.",
-        "How do you adapt to change?",
-        "What are your key skills?",
-        "What is your leadership experience?",
-        "How do you manage stress?",
-        "What is your work ethic?",
-        "What would your previous teammates say about you?",
-        "What is your biggest motivation?",
-        "How do you learn new skills?",
-        "Do you prefer working alone or in a team?",
-        "What questions do you have for us?",
-        "When can you start working?"
+        {
+            "question": "Tell me about yourself.",
+            "answer": "I am a motivated professional with strong communication and problem-solving skills, and I enjoy taking ownership to deliver results."
+        },
+        {
+            "question": "Why do you want to join our company?",
+            "answer": "I want to join your company because your values and growth opportunities align well with my career goals."
+        },
+        {
+            "question": "What are your strengths?",
+            "answer": "My strengths are quick learning, clear communication, teamwork, and consistent execution under deadlines."
+        },
+        {
+            "question": "What are your weaknesses?",
+            "answer": "One weakness I'm improving is overcommitting; I now prioritize better and set realistic timelines."
+        },
+        {
+            "question": "Why should we hire you?",
+            "answer": "You should hire me because I bring relevant skills, a strong work ethic, and a collaborative mindset."
+        },
+        {
+            "question": "Where do you see yourself in five years?",
+            "answer": "In five years, I see myself as a trusted contributor leading important projects and mentoring others."
+        },
+        {
+            "question": "Why did you choose this career?",
+            "answer": "I chose this career because I enjoy solving meaningful problems and continuously learning."
+        },
+        {
+            "question": "What motivates you?",
+            "answer": "I'm motivated by impactful work, clear goals, and opportunities to grow."
+        },
+        {
+            "question": "What are your hobbies?",
+            "answer": "My hobbies include reading, fitness, and learning new tools and industry trends."
+        },
+        {
+            "question": "Tell me about your biggest achievement.",
+            "answer": "My biggest achievement was delivering a high-impact project on time that improved team efficiency."
+        },
+        {
+            "question": "Tell me about a challenge you faced.",
+            "answer": "A major challenge was a tight deadline; I broke work into milestones and delivered with quality."
+        },
+        {
+            "question": "How do you handle pressure?",
+            "answer": "I handle pressure by prioritizing tasks, staying calm, and communicating proactively."
+        },
+        {
+            "question": "Describe a time you worked in a team.",
+            "answer": "In team settings, I collaborate openly, support teammates, and focus on shared outcomes."
+        },
+        {
+            "question": "What is your leadership style?",
+            "answer": "My leadership style is supportive and accountable, with clear expectations and regular feedback."
+        },
+        {
+            "question": "How do you handle conflict at work?",
+            "answer": "I handle conflict by listening carefully, focusing on facts, and working toward practical solutions."
+        },
+        {
+            "question": "What do you know about our company?",
+            "answer": "I understand your company is known for quality, innovation, and a strong customer-focused culture."
+        },
+        {
+            "question": "What are your salary expectations?",
+            "answer": "I'm open to a fair package based on role responsibilities, market standards, and growth opportunities."
+        },
+        {
+            "question": "Are you willing to relocate?",
+            "answer": "Yes, I am willing to relocate if the role requires it."
+        },
+        {
+            "question": "Are you willing to work overtime?",
+            "answer": "Yes, I can work overtime when business priorities demand it."
+        },
+        {
+            "question": "How do you prioritize tasks?",
+            "answer": "I prioritize based on urgency, impact, and dependencies, then track progress regularly."
+        },
+        {
+            "question": "How do you handle criticism?",
+            "answer": "I treat criticism as constructive feedback and use it to improve quickly."
+        },
+        {
+            "question": "Describe your problem-solving skills.",
+            "answer": "My problem-solving approach is to identify root cause, evaluate options, and execute the best solution."
+        },
+        {
+            "question": "How do you manage time effectively?",
+            "answer": "I manage time using clear planning, daily priorities, and periodic progress reviews."
+        },
+        {
+            "question": "What makes you unique?",
+            "answer": "What makes me unique is my adaptability, ownership mindset, and consistency in delivering results."
+        },
+        {
+            "question": "What is your greatest failure?",
+            "answer": "My biggest failure was underestimating effort early in my career; it taught me better planning and risk management."
+        },
+        {
+            "question": "What did you learn from your mistakes?",
+            "answer": "I learned to communicate early, ask for feedback, and continuously improve after mistakes."
+        },
+        {
+            "question": "What are your career goals?",
+            "answer": "My career goals are to deepen expertise, take larger responsibilities, and contribute to business impact."
+        },
+        {
+            "question": "How do you stay updated with industry trends?",
+            "answer": "I stay updated through industry blogs, courses, webinars, and professional communities."
+        },
+        {
+            "question": "How do you handle multiple deadlines?",
+            "answer": "I handle multiple deadlines by planning upfront, breaking tasks down, and tracking priorities closely."
+        },
+        {
+            "question": "What is your ideal work environment?",
+            "answer": "My ideal work environment is collaborative, accountable, and focused on continuous learning."
+        },
+        {
+            "question": "What type of manager do you prefer?",
+            "answer": "I prefer a manager who sets clear goals, gives timely feedback, and trusts the team."
+        },
+        {
+            "question": "What do you expect from this role?",
+            "answer": "I expect clear responsibilities, meaningful challenges, and opportunities to grow."
+        },
+        {
+            "question": "How do you deal with difficult coworkers?",
+            "answer": "I deal with difficult coworkers professionally through respectful communication and solution-focused discussions."
+        },
+        {
+            "question": "What are your short-term goals?",
+            "answer": "My short-term goal is to ramp up quickly and deliver strong performance in this role."
+        },
+        {
+            "question": "What are your long-term goals?",
+            "answer": "My long-term goal is to grow into a leadership role while continuing to deliver hands-on impact."
+        },
+        {
+            "question": "Why did you choose your degree?",
+            "answer": "I chose my degree because it gave me a strong foundation for analytical thinking and my career path."
+        },
+        {
+            "question": "What is your biggest professional accomplishment?",
+            "answer": "My biggest professional accomplishment was leading a project that produced measurable business improvement."
+        },
+        {
+            "question": "Describe your communication skills.",
+            "answer": "My communication style is clear, concise, and tailored to the audience."
+        },
+        {
+            "question": "How do you adapt to change?",
+            "answer": "I adapt to change by learning fast, staying open-minded, and adjusting plans pragmatically."
+        },
+        {
+            "question": "What are your key skills?",
+            "answer": "My key skills include communication, collaboration, problem-solving, and execution."
+        },
+        {
+            "question": "What is your leadership experience?",
+            "answer": "I have leadership experience in coordinating tasks, mentoring peers, and ensuring timely delivery."
+        },
+        {
+            "question": "How do you manage stress?",
+            "answer": "I manage stress through planning, prioritization, and maintaining healthy routines."
+        },
+        {
+            "question": "What is your work ethic?",
+            "answer": "My work ethic is disciplined, reliable, and quality-focused."
+        },
+        {
+            "question": "What would your previous teammates say about you?",
+            "answer": "My previous teammates would likely describe me as dependable, collaborative, and proactive."
+        },
+        {
+            "question": "What is your biggest motivation?",
+            "answer": "My biggest motivation is solving meaningful problems and seeing measurable outcomes."
+        },
+        {
+            "question": "How do you learn new skills?",
+            "answer": "I learn new skills by setting clear goals, practicing consistently, and applying them in real tasks."
+        },
+        {
+            "question": "Do you prefer working alone or in a team?",
+            "answer": "I'm comfortable both working independently and collaborating in teams, depending on what the task needs."
+        },
+        {
+            "question": "What questions do you have for us?",
+            "answer": "I would like to ask about success metrics for this role and expectations for the first 90 days."
+        },
+        {
+            "question": "When can you start working?",
+            "answer": "I can start as per your requirement, including immediate joining if needed."
+        }
     ]
 }

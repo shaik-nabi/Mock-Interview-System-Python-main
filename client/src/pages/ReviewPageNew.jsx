@@ -23,6 +23,7 @@ function ReviewPage() {
   const [answered, setAnswered] = useState(0);
   const [skipped, setSkipped] = useState(0);
   const [rating, setRating] = useState(0);
+  const [qaReport, setQaReport] = useState([]);
   const navigate = useNavigate();
   const serverURL = process.env.REACT_APP_SERVER_URL;
 
@@ -73,6 +74,15 @@ function ReviewPage() {
       setAnswered(response.data.answered);
       setSkipped(response.data.skipped);
       setRating(response.data.rating);
+
+      const responseReport = Array.isArray(response.data.qa_report) ? response.data.qa_report : [];
+      const fallbackReport = gQtns.map((question, index) => ({
+        question_no: index + 1,
+        question,
+        submitted_answer: typeof gAns[index] === 'string' && gAns[index].trim() ? gAns[index] : 'Skipped',
+        actual_answer: null
+      }));
+      setQaReport(responseReport.length > 0 ? responseReport : fallbackReport);
     } catch (error) {
       toast.error(error.response ? error.response.data.errorMsg : error.message || error,
         { ...toastErrorStyle(), autoClose: 2000 }
@@ -141,6 +151,40 @@ function ReviewPage() {
                     },
                   }}
                 >{displayText}</Markdown>
+
+                {qaReport.length > 0 && (
+                  <div className='report-section'>
+                    <h2>Interview Report</h2>
+                    <p className='report-subtitle'>
+                      Actual Answer vs Submitted Answer
+                    </p>
+                    <div className='report-list'>
+                      {qaReport.map((item, index) => (
+                        <div className='report-card' key={`${item.question_no || index}-${index}`}>
+                          <div className='report-card-top'>
+                            <span className='report-q-number'>Question {item.question_no || index + 1}</span>
+                            <p className='report-question'>{item.question}</p>
+                          </div>
+
+                          <div className='report-answer-grid'>
+                            <div className='report-answer-box'>
+                              <h4>Actual Answer</h4>
+                              <Markdown className='report-answer-text'>
+                                {item.actual_answer || '_Actual answer is not available for this question._'}
+                              </Markdown>
+                            </div>
+                            <div className='report-answer-box submitted-answer-box'>
+                              <h4>Submitted Answer</h4>
+                              <Markdown className='report-answer-text'>
+                                {item.submitted_answer || 'Skipped'}
+                              </Markdown>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
         }
